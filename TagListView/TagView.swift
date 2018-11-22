@@ -39,6 +39,13 @@ open class TagView: UIButton {
             reloadStyles()
         }
     }
+    
+    @IBInspectable open var disabledTextColor: UIColor = UIColor.white {
+        didSet {
+            reloadStyles()
+        }
+    }
+    
     @IBInspectable open var titleLineBreakMode: NSLineBreakMode = .byTruncatingMiddle {
         didSet {
             titleLabel?.lineBreakMode = titleLineBreakMode
@@ -75,7 +82,19 @@ open class TagView: UIButton {
         }
     }
     
+    @IBInspectable open var disabledBorderColor: UIColor? {
+        didSet {
+            reloadStyles()
+        }
+    }
+    
     @IBInspectable open var selectedBackgroundColor: UIColor? {
+        didSet {
+            reloadStyles()
+        }
+    }
+    
+    @IBInspectable open var disabledBackgroundColor: UIColor? {
         didSet {
             reloadStyles()
         }
