@@ -138,6 +138,12 @@ open class TagView: UIButton {
         }
     }
     
+    override open var isEnabled: Bool {
+        didSet {
+            reloadStyles()
+        }
+    }
+    
     // MARK: remove button
     
     let removeButton = CloseButton()
