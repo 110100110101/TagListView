@@ -321,14 +321,17 @@ open class TagListView: UIView {
         
         tagView.textColor = textColor
         tagView.selectedTextColor = selectedTextColor
+        tagView.disabledTextColor = disabledTextColor
         tagView.tagBackgroundColor = tagBackgroundColor
         tagView.highlightedBackgroundColor = tagHighlightedBackgroundColor
         tagView.selectedBackgroundColor = tagSelectedBackgroundColor
+        tagView.disabledBackgroundColor = tagDisabledBackgroundColor
         tagView.titleLineBreakMode = tagLineBreakMode
         tagView.cornerRadius = cornerRadius
         tagView.borderWidth = borderWidth
         tagView.borderColor = borderColor
         tagView.selectedBorderColor = selectedBorderColor
+        tagView.disabledBorderColor = disabledBorderColor
         tagView.paddingX = paddingX
         tagView.paddingY = paddingY
         tagView.textFont = textFont
