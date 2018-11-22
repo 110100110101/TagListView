@@ -119,6 +119,11 @@ open class TagView: UIButton {
             layer.borderColor = selectedBorderColor?.cgColor ?? borderColor?.cgColor
             setTitleColor(selectedTextColor, for: UIControl.State())
         }
+        else if !isEnabled {
+            backgroundColor = disabledBackgroundColor ?? tagBackgroundColor
+            layer.borderColor = disabledBorderColor?.cgColor ?? borderColor?.cgColor
+            setTitleColor(disabledTextColor, for: UIControl.State())
+        }
         else {
             backgroundColor = tagBackgroundColor
             layer.borderColor = borderColor?.cgColor
