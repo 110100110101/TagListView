@@ -31,6 +31,14 @@ open class TagListView: UIView {
             }
         }
     }
+    
+    @IBInspectable open dynamic var disabledTextColor: UIColor = .white {
+        didSet {
+            tagViews.forEach {
+                $0.disabledTextColor = disabledTextColor
+            }
+        }
+    }
 
     @IBInspectable open dynamic var tagLineBreakMode: NSLineBreakMode = .byTruncatingMiddle {
         didSet {
@@ -64,6 +72,14 @@ open class TagListView: UIView {
         }
     }
     
+    @IBInspectable open dynamic var tagDisabledBackgroundColor: UIColor? {
+        didSet {
+            tagViews.forEach {
+                $0.disabledBackgroundColor = tagDisabledBackgroundColor
+            }
+        }
+    }
+    
     @IBInspectable open dynamic var cornerRadius: CGFloat = 0 {
         didSet {
             tagViews.forEach {
@@ -91,6 +107,14 @@ open class TagListView: UIView {
         didSet {
             tagViews.forEach {
                 $0.selectedBorderColor = selectedBorderColor
+            }
+        }
+    }
+    
+    @IBInspectable open dynamic var disabledBorderColor: UIColor? {
+        didSet {
+            tagViews.forEach {
+                $0.disabledBorderColor = disabledBorderColor
             }
         }
     }
