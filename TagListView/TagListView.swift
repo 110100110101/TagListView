@@ -428,6 +428,12 @@ open class TagListView: UIView {
         return tagViews.filter { $0.isSelected }
     }
     
+    open func deselectAllTags() {
+        tagViews.forEach {
+            $0.isSelected = false
+        }
+    }
+    
     // MARK: - Events
     
     @objc func tagPressed(_ sender: TagView!) {
